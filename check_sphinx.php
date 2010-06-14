@@ -43,6 +43,7 @@ $default_opt = array(
 	'H' => 'localhost',
 	'p' => 9312,
 	'i' => '*',
+	's' => 'test',
 	't' => 10,
 	'd' => null,
 );
