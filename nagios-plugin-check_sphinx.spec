@@ -3,8 +3,8 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Nagios plugin to check Sphinx search engine status
 Name:		nagios-plugin-%{plugin}
-Version:	0.1
-Release:	0.1
+Version:	1.0
+Release:	1
 License:	GPL v2+
 Group:		Networking
 Source0:	%{plugin}.php
