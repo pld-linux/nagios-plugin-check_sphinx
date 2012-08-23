@@ -4,7 +4,7 @@
 Summary:	Nagios plugin to check Sphinx search engine status
 Name:		nagios-plugin-%{plugin}
 Version:	1.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Networking
 Source0:	%{plugin}.php
@@ -13,8 +13,8 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	nagios-common
 Requires:	nagios-plugins-libs
+Requires:	php(core) >= %{php_min_version}
 Requires:	php(sphinx)
-Requires:	php-common >= 4:%{php_min_version}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
