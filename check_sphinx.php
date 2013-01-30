@@ -3,7 +3,7 @@
 /* vim: set encoding=utf-8: */
 /*
  *  Nagios plugin to check Sphinx search engine status.
- *  Copyright (C) 2010  Elan Ruusamäe <glen@delfi.ee>
+ *  Copyright (C) 2010-2012 Elan Ruusamäe <glen@delfi.ee>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,8 +17,6 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * @(#) $Id$
  */
 
 define('PROGRAM', basename(array_shift($argv)));
@@ -74,9 +72,9 @@ if (isset($opt['d'])) {
 }
 
 if ($res['total']) {
-	printf("OK: Found %d documents in %.3f secs\n", $res['total'], $res['time']);
+	printf("OK: Index '%s': Query: '%s': Found %d documents in %.3f secs\n", $opt['i'], $opt['s'], $res['total'], $res['time']);
 	exit(STATE_OK);
 } else {
-	printf("WARNING: Found %d documents in %.3f secs\n", $res['total'], $res['time']);
+	printf("WARNING: Index '%s': Query: '%s': Found %d documents in %.3f secs\n", $opt['i'], $opt['s'], $res['total'], $res['time']);
 	exit(STATE_WARNING);
 }
