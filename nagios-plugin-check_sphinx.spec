@@ -4,7 +4,7 @@
 Summary:	Nagios plugin to check Sphinx search engine status
 Name:		nagios-plugin-%{plugin}
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Networking
 Source0:	%{plugin}.php
@@ -31,7 +31,7 @@ Nagios plugin to check Sphinx search engine status.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{plugindir}}
 install -p %{SOURCE0} $RPM_BUILD_ROOT%{plugindir}/%{plugin}
-cp -a %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/%{plugin}.cfg
+cp -p %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/%{plugin}.cfg
 
 %clean
 rm -rf $RPM_BUILD_ROOT

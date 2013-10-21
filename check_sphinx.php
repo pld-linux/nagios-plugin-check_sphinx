@@ -54,7 +54,7 @@ if (empty($opt['H']) || empty($opt['s'])) {
 }
 
 $sphinx = new SphinxClient();
-$sphinx->SetServer($opt['H'], $opt['p']);
+$sphinx->SetServer($opt['H'], (int )$opt['p']);
 #$sphinx->setMatchMode(SPH_MATCH_ANY);
 $sphinx->SetConnectTimeout($opt['t']);
 $sphinx->setMaxQueryTime($opt['t']);
