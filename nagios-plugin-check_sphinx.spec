@@ -1,6 +1,5 @@
 %define		plugin	check_sphinx
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Nagios plugin to check Sphinx search engine status
 Name:		nagios-plugin-%{plugin}
 Version:	1.0
