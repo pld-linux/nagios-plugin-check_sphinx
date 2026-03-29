@@ -3,7 +3,7 @@
 Summary:	Nagios plugin to check Sphinx search engine status
 Name:		nagios-plugin-%{plugin}
 Version:	1.0
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Networking
 Source0:	%{plugin}.php
